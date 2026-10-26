@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RUM</title>
+    <title>Drømmehaven</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/829d5199ff.js" crossorigin="anonymous"></script>
 </head>
@@ -15,18 +15,48 @@
     <header>
         <nav class="navbar" aria-label="Hovedmenu"> 
             <div class="logo">
-            <i class="fa-solid fa-door-open"></i>
-            <span>RUM</span>
+                <i class="fa-regular fa-moon"></i>
+                <span>Drømmehaven</span>
             </div>
             
-            <ul class="nav-links">
+            <!-- Burgermenu til mobil -->
+            <div class="burger-menu" id="burger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#forside">Forside</a></li>
                 <li><a href="#mental-sundhed">Mental Sundhed</a></li>
                 <li><a href="#kontakt-&-støtte">Kontakt & støtte</a></li>
             </ul>
-</nav>
+        </nav>
     </header>
 
-    
+    <!-- menuen kan åbnes og lukkes på mobil -->
+    <script>
+        const burger = document.getElementById('burger');
+        const navLinks = document.getElementById('nav-links');
+
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+
+    <main>
+    <section class="tekst-img">
+        <!-- Tekst og knap i venstre side -->
+        <div class="tekst-indhold">
+            <h1>Et sted hvor du kan drømme dig væk fra hverdagens larm</h1>
+            <p>Drømmehaven er et digitalt fristed for unge. Her finder du råd, inspiration og redskaber til at håndtere stress, tankemylder og hverdagens pres.</p>
+            <a href="#" class="cta-knap">Udforsk gode råd</a>
+        </div>
+
+        <!-- Billede i højre side -->
+        <div class="billede">
+            <img src="vindue.jpg" alt="Person ved vindue">
+        </div>
+    </section>
+</main>
+
 </body>
 </html>

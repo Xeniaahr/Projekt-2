@@ -1,75 +1,156 @@
 /* mobile first */
 * { 
-margin: 0; 
-padding: 0; 
-box-sizing: border-box; 
-font-family: 'Montserrat', sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Montserrat', sans-serif; 
 } 
 
-/* Navbaren på mobilen: Stabler tingene oven på hinanden */ 
+/* Navbaren på mobilen */ 
 .navbar { 
-display: flex; 
-flex-direction: column; 
-align-items: center; 
-gap: 15px; 
-padding: 15px; 
-background-color: #f7f6f2; 
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 15px 20px; 
+    background-color: #f7f6f2; 
 } 
 
 .logo { 
-display: flex; 
-align-items: center; 
-gap: 10px; 
-font-size: 1.2rem; 
-font-weight: bold; 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    font-size: 1.2rem; 
+    font-weight: bold; 
 } 
 
+/* Burgermenu på mobilen */
+.burger-menu {
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: block; /* Vises på mobil */
+}
+
+/* Skjul menuen på mobil som standard */
 .nav-links { 
-display: flex; 
-flex-direction: column; /* Gør menupunkterne lodrette på mobilen */ 
-align-items: center;
-list-style: none; 
-gap: 10px; 
+    display: none; 
+    flex-direction: column; 
+    align-items: center;
+    list-style: none; 
+    gap: 15px; 
+    width: 100%;
+    margin-top: 15px;
 } 
+
+/* Vises når der klikkes på burgermenuen */
+.nav-links.active {
+    display: flex;
+}
 
 .nav-links a { 
-text-decoration: none; 
-color: #000; 
-font-weight: 700; 
-font-size: 1rem; 
+    text-decoration: none; 
+    color: #000; 
+    font-weight: 700; 
+    font-size: 1rem; 
 }
 
 
-/*max-width - skærmen må maksimalt være denne størrelse og nedefter*/
-/*min-width - skærmen skal minimum være denne størrelse og opefter*/
+/* Styling til tekst og billede (Mobile first) */
+.tekst-img {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}
 
-/*Computer (når skærmen er 768px eller større) */
-@media screen (min-width: 768px){
+.tekst-img div, 
+.tekst-img img {
+    width: 100%;
+}
+
+.tekst-img img {
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+
+
+/* Computer (når skærmen er 768px eller større) */
+@media screen and (min-width: 768px){
     .navbar {
         flex-direction: row;
         justify-content: space-between;
         padding: 20px 60px;
     }
 
+    /* Skjuler burgermenu på computer */
+    .burger-menu {
+        display: none;
+    }
+
+    /* Viser altid menuen vandret på computeren */
     .nav-links {
+        display: flex;
         flex-direction: row;
+        width: auto;
+        margin-top: 0;
         gap: 40px;
     }
+
     .nav-links a {
          font-size: 1.1rem;
     }
+
+    
+    .tekst-img {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 60px;
+        gap: 50px;
+    }
+
+    .tekst-indhold {
+        flex: 1;
+    }
+
+    .billede-indhold {
+        flex: 1;
+    }
+
+    .tekst-img img {
+        width: 100%;
+        max-width: 500px;
+    }
+    
 }
 
 @media screen and (max-width: 425px) {     
     .tekst-img { 
-         flex-direction: column;    
- }      
- .tekst-img div, .tekst-img img {
-          width: 100%;
-        
-}          
-.cta {         
-    flex-direction: column;    
- } 
+        flex-direction: column;    
+    }      
+    .tekst-img div, .tekst-img img {
+        width: 100%;
+    }          
+    .cta {         
+        flex-direction: column;    
+    } 
 }
 
+.cta-knap {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    padding: 12px 24px;
+    border: 1px solid #ccc; /* Giver den en fin ramme */
+    border-radius: 30px;   /* Gør hjørnerne runde og bløde */
+    background-color: transparent; /* Eller #fff hvis den skal være helt hvid */
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+/* Gør den lidt mørkere eller giver den en fed effekt, når man holder musen over */
+.cta-knap:hover {
+    background-color: #eee;
+}
