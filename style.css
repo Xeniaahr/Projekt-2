@@ -233,3 +233,59 @@
         flex: 1; /* Gør at de deler bredden ligeligt */
     }
 }
+
+/* Styling til undersider */
+.underside-indhold {
+    padding: 30px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tekst-blok {
+    margin-bottom: 40px;
+}
+
+.tekst-blok h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.tekst-blok h2, 
+.spalte h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.tekst-blok p, 
+.spalte p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+/* Spalter i bunden (Mobil) */
+.spalter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Computervisning (mental sundhed side) */
+@media screen and (min-width: 768px) {
+    .underside-indhold {
+        padding: 50px 60px;
+    }
+
+    .spalter-container {
+        flex-direction: row; /* Stiller "Håndtering af stress" og "Sunde digitale vaner" ved siden af hinanden */
+        gap: 60px;
+    }
+
+    .spalte {
+        flex: 1;
+    }
+}
