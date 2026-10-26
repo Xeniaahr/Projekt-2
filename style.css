@@ -1,0 +1,75 @@
+/* mobile first */
+* { 
+margin: 0; 
+padding: 0; 
+box-sizing: border-box; 
+font-family: 'Montserrat', sans-serif; 
+} 
+
+/* Navbaren på mobilen: Stabler tingene oven på hinanden */ 
+.navbar { 
+display: flex; 
+flex-direction: column; 
+align-items: center; 
+gap: 15px; 
+padding: 15px; 
+background-color: #f7f6f2; 
+} 
+
+.logo { 
+display: flex; 
+align-items: center; 
+gap: 10px; 
+font-size: 1.2rem; 
+font-weight: bold; 
+} 
+
+.nav-links { 
+display: flex; 
+flex-direction: column; /* Gør menupunkterne lodrette på mobilen */ 
+align-items: center;
+list-style: none; 
+gap: 10px; 
+} 
+
+.nav-links a { 
+text-decoration: none; 
+color: #000; 
+font-weight: 700; 
+font-size: 1rem; 
+}
+
+
+/*max-width - skærmen må maksimalt være denne størrelse og nedefter*/
+/*min-width - skærmen skal minimum være denne størrelse og opefter*/
+
+/*Computer (når skærmen er 768px eller større) */
+@media screen (min-width: 768px){
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 60px;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        gap: 40px;
+    }
+    .nav-links a {
+         font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 425px) {     
+    .tekst-img { 
+         flex-direction: column;    
+ }      
+ .tekst-img div, .tekst-img img {
+          width: 100%;
+        
+}          
+.cta {         
+    flex-direction: column;    
+ } 
+}
+
