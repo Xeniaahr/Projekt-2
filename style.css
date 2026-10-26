@@ -289,3 +289,127 @@
         flex: 1;
     }
 }
+
+/* Styling til Kontakt & Støtte side */
+.kontakt-indhold {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.kontakt-header {
+    margin-bottom: 40px;
+}
+
+.kontakt-header h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.kontakt-header p {
+    font-size: 1.1rem;
+    color: #444;
+}
+
+/* grid layout (de to bokse) */
+.kontakt-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Venstre boks (Ring til os) */
+.kontakt-info-boks {
+    background-color: #f5f0eb;
+    padding: 30px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.info-item i {
+    font-size: 2rem;
+    color: #333;
+}
+
+.telefon-nr {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #000;
+    margin-top: 5px;
+}
+
+.info-tekst {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Højre boks (Formular) */
+.kontakt-form-boks {
+    background-color: #f5f0eb;
+    padding: 30px;
+    border-radius: 16px;
+}
+
+.kontakt-form-boks h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.form-gruppe {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-gruppe label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-gruppe input, 
+.form-gruppe textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #f5f0eb;
+    border-radius: 10px;
+    background-color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+.form-gruppe input:focus, 
+.form-gruppe textarea:focus {
+    outline: none;
+    border-color: #888;
+}
+
+/* Computervisning (Ved siden af hinanden) */
+@media screen and (min-width: 768px) {
+    .kontakt-indhold {
+        padding: 60px;
+    }
+
+    .kontakt-grid {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .kontakt-info-boks, 
+    .kontakt-form-boks {
+        flex: 1;
+    }
+}
