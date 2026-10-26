@@ -143,14 +143,93 @@
     color: #000;
     font-weight: 600;
     padding: 12px 24px;
-    border: 1px solid #ccc; /* Giver den en fin ramme */
+    border: 1px solid #ccc; /* Giver den en ramme */
     border-radius: 30px;   /* Gør hjørnerne runde og bløde */
-    background-color: transparent; /* Eller #fff hvis den skal være helt hvid */
+    background-color: transparent; 
     transition: background-color 0.3s ease;
     margin-top: 15px;
 }
 
-/* Gør den lidt mørkere eller giver den en fed effekt, når man holder musen over */
+/* Gør CTA knappen mørkere når man holder musen over */
 .cta-knap:hover {
     background-color: #eee;
+}
+
+/* temaer sektion */
+.temaer-sektion {
+    padding: 40px 20px;
+}
+
+.temaer-sektion h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+/* Mobil (stiller boksene under hinanden) */
+.temaer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* De enkelte bokse */
+.tema-kort {
+    background-color: #f5f0eb; /* Den lyse sandfarve fra dit design */
+    border-radius: 16px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 180px;
+}
+
+.tema-top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.tema-top i {
+    font-size: 1.4rem;
+}
+
+.tema-top h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.tema-kort p {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.laes-mere {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 0.95krem;
+}
+
+.laes-mere:hover {
+    text-decoration: underline;
+}
+
+/* Computer (når skærmen er 768px eller bredere) */
+@media screen and (min-width: 768px) {
+    .temaer-sektion {
+        padding: 60px;
+    }
+
+    .temaer-container {
+        flex-direction: row; /* Stiller boksene ved siden af hinanden i stedet for over */
+        gap: 30px;
+    }
+
+    .tema-kort {
+        flex: 1; /* Gør at de deler bredden ligeligt */
+    }
 }
